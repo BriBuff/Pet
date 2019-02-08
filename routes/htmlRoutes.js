@@ -13,11 +13,13 @@ module.exports = function(app) {
 
   // Load example page and pass in an example by id
   app.get("/breed/:id", function(req, res) {
-    db.breed.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+    db.breed
+      .findOne({ where: { id: req.params.id } })
+      .then(function(dbExample) {
+        res.render("example", {
+          example: dbExample
+        });
       });
-    });
   });
 
   // Render 404 page for any unmatched routes

@@ -10,6 +10,6 @@ module.exports = function(sequelize, DataTypes) {
     breed_photo: DataTypes.STRING,
     breed_link: DataTypes.STRING
   });
-  
+
   return breed;
 };
