@@ -7,9 +7,9 @@ module.exports = function(sequelize, DataTypes) {
     breed_grooming_req: DataTypes.INTEGER,
     breed_affection_level: DataTypes.INTEGER,
     breed_desc: DataTypes.TEXT,
-    breed_photo: DataTypes.STRING
+    breed_photo: DataTypes.STRING,
+    breed_link: DataTypes.STRING
   });
+
   return breed;
 };
-
-// Exporting
