@@ -38,7 +38,7 @@
           <tr>
             <th width="200">Breed Name</th>
             <th width="200">Breed Description</th>
-            <th width="200">Photo Link</th>
+            <th width="200">Photo</th>
           </tr>
         </thead>
         <tbody>
@@ -46,9 +46,8 @@
         </tbody>
       </table>
     </container>
-    
-    <script type="text/javascript">
 
+    <script type="text/javascript">
       $(document).ready(function () {
 
         $.ajax({
@@ -56,15 +55,24 @@
           method: "GET"
         }).then(function (data) {
           //populate the table here
+          console.log(data[0].breed_photo);
+          var image = $("<img alt='dog' src='/images/dachsund.jpg'>");
+         $("tbody").append(image);
+
           for (var i = 0; i < data.length; i++) {
-            var tR= $("<tr>");
-              tR.append(
-                $("<td>").text(data[i].breed_name),
-                  $("<td>").text(data[i].breed_descript),
-                    $("<td>").text(data[i].breed_photo)
-              );
-              $("tbody").append(tR);
-                
+            var tR = $("<tr>");
+            
+            var image = $("<img>").attr("src", data[i].breed_photo);
+            
+
+            tR.append(
+              $("<td>").text(data[i].breed_name),
+              $("<td>").text(data[i].breed_descript),
+
+              $("<td>").append(image)
+            );
+            $("tbody").append(tR);
+
           }
 
         });
