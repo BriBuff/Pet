@@ -54,21 +54,15 @@
           url: "/api/allbreeds",
           method: "GET"
         }).then(function (data) {
-          //populate the table here
-          console.log(data[0].breed_photo);
-          var image = $("<img alt='dog' src='/images/dachsund.jpg'>");
-         $("tbody").append(image);
+         
 
           for (var i = 0; i < data.length; i++) {
             var tR = $("<tr>");
-            
             var image = $("<img>").attr("src", data[i].breed_photo);
             
-
             tR.append(
               $("<td>").text(data[i].breed_name),
               $("<td>").text(data[i].breed_descript),
-
               $("<td>").append(image)
             );
             $("tbody").append(tR);

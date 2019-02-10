@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "",
-    "port": 3306,
+    "password": "root",
+    "port": 8888,
     "database": "Breeds_db",
     "host": "localhost",
     "dialect": "mysql"
