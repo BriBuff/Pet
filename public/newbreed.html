@@ -15,6 +15,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>Foundation Starter Template</title>
             <link rel="stylesheet" href="css/foundation.css" />
+            <script src="https://code.jquery.com/jquery.js"></script>
           </head>
           <body>
                 <header class="subnav-hero-section">
@@ -35,7 +36,7 @@
                       <h3>Add a New Breed!</h3>
                       <div class="row columns">
                         <label>Breed Name:
-                          <input type="text" id= "breedName" name="breedName" placeholder="Great Dane" required>
+                          <input type="text" id= "breedName" name="breedName" placeholder="Breed Name" required>
                         </label>
                       </div>
                       <div class="row columns">
@@ -100,12 +101,12 @@
                       </div>
                       <div class="row columns">
                           <label>Breed Picture Link
-                            <input type="text" name="pic_link" id="breedPicLink" placeholder="https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/great-dane-detail.jpg?bust=1535565868&width=630" required>
+                            <input type="text" name="pic_link" id="breedPicLink" placeholder="Picture Link" required>
                           </label>
                       </div>
                         <div class="row columns">
                           <label>Breed Link
-                              <input type="text" name="link" id="breedLink" placeholder="https://www.petfinder.com/dog-breeds/great-dane/" required>
+                              <input type="text" name="link" id="breedLink" placeholder="Breed Link" required>
                             </label>
                         </div>
                       <div class="row">
@@ -122,7 +123,7 @@
     </container>
 
     <script type="text/javascript">
-      $("#form").on("submit", function (event) {
+      $("#submit").on("click", function (event) {
         event.preventDefault();
         console.log("here form")
         
@@ -138,10 +139,11 @@
           photo: $("#breedPicLink").val().trim(),
           link: $("#breedLink").val().trim()
       };
+      console.log(valAll);
         
         $.post("/api/newbreed", valAll, function (data){
         
-           
+           alert("New breed added!");
         });
       });
     </script>
