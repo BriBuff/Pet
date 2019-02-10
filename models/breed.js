@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     breed_ease_training: DataTypes.INTEGER,
     breed_grooming_req: DataTypes.INTEGER,
     breed_affection_level: DataTypes.INTEGER,
-    breed_desc: DataTypes.TEXT,
+    breed_descript: DataTypes.TEXT,
     breed_photo: DataTypes.STRING,
     breed_link: DataTypes.STRING
   });
