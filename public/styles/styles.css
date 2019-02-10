@@ -4,5 +4,12 @@
 
 h2{
   align-content: center;
-  color: red;
+ 
+}
+
+.translucent-quiz-overlay {
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.8);
+  padding: 10px;
+  color: #fefefe;
 }
