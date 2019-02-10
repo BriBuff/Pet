@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BreedFinder Quiz</title>
     <link rel="stylesheet" href="./styles/foundation.css" />
+    <script src="https://code.jquery.com/jquery.js"></script>
   </head>
   <body>
         <header class="subnav-hero-section">
@@ -77,14 +78,20 @@
                                       <button type="submit" class="success button">Find my dog!</button>
                   </div>
                 </form>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.min.js"></script>
-    <script> src="./public/styles/foundation.css"</script>
+    <!-- <script src="js/vendor/jquery.js"></script> -->
+    <!-- <script src="js/vendor/what-input.js"></script> -->
+    <!-- <script src="js/vendor/foundation.min.js"></script> -->
+    <!-- <script> src="./public/styles/foundation.css"</script> -->
     <script>
-      $(document).foundation();
-      $("submit").on("click", function(event){
+      
+      $(".success").on("click", function(event){
         event.preventDefault();
+        var surveyArray = [];
+        console.log("clicked");
+        var an = $(".q5").find(".response").val();
+        
+        
+        console.log(an);
         
       })
       
