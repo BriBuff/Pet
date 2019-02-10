@@ -31,16 +31,16 @@
         <br>
 
             <div class="translucent-form-overlay">
-                    <form>
+                    <form id="form">
                       <h3>Add a New Breed!</h3>
                       <div class="row columns">
                         <label>Breed Name:
-                          <input type="text" name="breedName" placeholder="Great Dane" required>
+                          <input type="text" id= "breedName" name="breedName" placeholder="Great Dane" required>
                         </label>
                       </div>
                       <div class="row columns">
                         <label> Breed Energy (1-5): 
-                          <select name="status" type="text" required>
+                          <select name="status" type="text" id="breedEnergy" required>
                             <option value=1>1 (No Energy)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -51,7 +51,7 @@
                       </div>
                       <div class="row columns">
                             <label> Breed Excercise (1-5): 
-                              <select name="status" type="text" required>
+                              <select name="status" type="text" id="breedExcercise" required>
                                 <option value=1>1 (No Excercise)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -62,7 +62,7 @@
                           </div>
                         <div class="row columns">
                             <label> Breed Ease of Training (1-5): 
-                                <select name="status" type="text" required>
+                                <select name="status" type="text" id="breedTraining" required>
                                     <option value=1>1 (Hard to Train)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -73,7 +73,7 @@
                               </div>
                         <div class="row columns">
                             <label> Breed Grooming (1-5): 
-                                <select name="status" type="text" required>
+                                <select name="status" type="text" id="breedGroom" required>
                                     <option value=1> 1 (Easy to Groom)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -84,7 +84,7 @@
                                   </div>
                          <div class="row columns">
                             <label> Breed Affection (1-5): 
-                                <select name="status" type="text" required>
+                                <select name="status" type="text" id="breedAffection" required>
                                     <option value=1> 1 (Not Affectionate)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -95,22 +95,22 @@
                                   </div>
                       <div class="row columns">
                         <label>Breed Description
-                          <input type="text" name="description" placeholder="This breed is known for..." required>
+                          <input type="text" name="description" id="breedDescript" placeholder="This breed is known for..." required>
                         </label>
                       </div>
                       <div class="row columns">
-                            <label>Breed Link
-                              <input type="text" name="link" placeholder="https://www.petfinder.com/dog-breeds/great-dane/" required>
+                          <label>Breed Picture Link
+                            <input type="text" name="pic_link" id="breedPicLink" placeholder="https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/great-dane-detail.jpg?bust=1535565868&width=630" required>
+                          </label>
+                      </div>
+                        <div class="row columns">
+                          <label>Breed Link
+                              <input type="text" name="link" id="breedLink" placeholder="https://www.petfinder.com/dog-breeds/great-dane/" required>
                             </label>
-                          </div>
-                          <div class="row columns">
-                                <label>Breed Picture
-                                  <input type="text" name="pic_link" placeholder="https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/great-dane-detail.jpg?bust=1535565868&width=630" required>
-                                </label>
-                              </div>
+                        </div>
                       <div class="row">
                       </div>
-                      <button type="button" class="primary button expanded search-button">
+                      <button type="button" class="primary button expanded search-button" id="submit">
                         Add Breed
                       </button>
                    </form>
@@ -120,6 +120,32 @@
                   
 
     </container>
+
+    <script type="text/javascript">
+      $("#form").on("submit", function (event) {
+        event.preventDefault();
+        console.log("here form")
+        
+        var valAll = 
+        {
+          name: $("#breedName").val().trim(),
+          energy: $("#breedEnergy").val().trim(),
+          exercise: $("#breedExcercise").val().trim(),
+          training: $("#breedTraining").val().trim(),
+          grooming: $("#breedGroom").val().trim(),
+          affection: $("#breedAffection").val().trim(),
+          description: $("#breedDescript").val().trim(),
+          photo: $("#breedPicLink").val().trim(),
+          link: $("#breedLink").val().trim()
+
+      };
+        
+        $.post("/api/newbreed", valAll, function (data){
+        
+           
+        });
+      });
+    </script>
     
 </body>
 </html>
