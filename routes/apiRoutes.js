@@ -1,15 +1,15 @@
 var db = require("../models");
 
-module.exports = function (app) {
+module.exports = function(app) {
   // Get all examples
-  app.get("/api/allbreeds", function (req, res) {
-    db.Breed.findAll({}).then(function (dbExamples) {
+  app.get("/api/allbreeds", function(req, res) {
+    db.Breed.findAll({}).then(function(dbExamples) {
       res.json(dbExamples);
     });
   });
 
   // Create a new breed
-  app.post("/api/newbreed", function (req, res) {
+  app.post("/api/newbreed", function(req, res) {
     var breed = req.body.name;
     var routeName = breed.replace(/\s+/g, "").toLowerCase();
     db.Breed.create({
