@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var breed = sequelize.define("Breed", {
+  var Breed = sequelize.define("Breed", {
     breed_name: DataTypes.STRING,
     breed_energy: DataTypes.INTEGER,
     breed_exercise_req: DataTypes.INTEGER,
@@ -11,5 +11,5 @@ module.exports = function(sequelize, DataTypes) {
     breed_link: DataTypes.STRING
   });
 
-  return breed;
+  return Breed;
 };
