@@ -82,7 +82,10 @@
     <script> src="./public/styles/foundation.css"</script>
     <script>
       $(document).foundation();
-      
+      $("submit").on("click", function(event){
+        event.preventDefault();
+        
+      })
       
     </script>
 
