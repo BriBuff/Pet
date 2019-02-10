@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/allbreeds", function(req, res) {
-    db.breed.findAll({}).then(function(dbExamples) {
+    db.Breed.findAll({}).then(function(dbExamples) {
       res.json(dbExamples);
     });
   });
@@ -14,7 +14,7 @@ module.exports = function(app) {
     var routeName = breed.name.replace(/\s+/g, "").toLowerCase();
 
     // Then add the character to the database using sequelize
-    db.breed.newBreed.create({
+    db.Breed.newBreed.create({
       routeName: routeName,
       breed_name: name,
       breed_energy: energy,
