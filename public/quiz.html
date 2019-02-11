@@ -69,14 +69,14 @@
                                     <input type="radio" name="question4" value="5" id="q4_5"><label for="stronglyAgree">Strongly Agree</label>
                                   </fieldset>
                                 </div>
-                                <div class="grid-x grid-margin-x grid-margin-y">
-                                        <fieldset class="large-6 cell">
+                                <div class="grid-x grid-margin-x grid-margin-y q5">
+                                        <fieldset class="large-6 cell parentq5">
                                             <legend>My favorite way to spend an evening is relaxing at home with loved ones.</legend>
-                                          <input type="radio" name="question5" value="1" id="q5_1"><label for="stronglyDisagree">Strongly Disagree</label>
-                                          <input type="radio" name="question5" value="2" id="q5_2"><label for="disagree">Disagree</label>
-                                          <input type="radio" name="question5" value="3" id="q5_3"><label for="neutral">Neutral</label>
-                                          <input type="radio" name="question5" value="4" id="q5-4"><label for="agree">Agree</label>
-                                          <input type="radio" name="question5" value="5" id="q5_5"><label for="stronglyAgree">Strongly Agree</label>
+                                          <input type="radio" value="11" class="res"><label for="stronglyDisagree">Strongly Disagree</label>
+                                          <input type="radio" value="2" class="res"><label for="disagree">Disagree</label>
+                                          <input type="radio" value="3" class="res"><label for="neutral">Neutral</label>
+                                          <input type="radio" value="4" class="res"><label for="agree">Agree</label>
+                                          <input type="radio" value="5" class="res"><label for="stronglyAgree">Strongly Agree</label>
                                           </fieldset>
                                       </div>
                                       <div class="grid-x grid-margin-x grid-margin-y">
@@ -111,14 +111,12 @@
 
     <script>
       
-      $(".success").on("click", function(event){
+      $(".primary").on("click", function(event){
         event.preventDefault();
         var surveyArray = [];
         console.log("clicked");
-        var an = $(".q5").find(".response").val();
-        
-        
-        console.log(an);
+        var value = $(".q5").find(".res").val();
+        console.log(value);
         
       })
       
