@@ -42,15 +42,15 @@ module.exports = function(app) {
         "breed_grooming_req",
         "breed_affection_level"
       ]
-    }).then(function (dbExamples) {
+    }).then(function(dbExamples) {
       breedObject = dbExamples;
       for (var br in breedObject) {
         var breedArray = [
-          breedObject[br].dataValues["breed_energy"],
-          breedObject[br].dataValues["breed_exercise_req"],
-          breedObject[br].dataValues["breed_ease_training"],
-          breedObject[br].dataValues["breed_grooming_req"],
-          breedObject[br].dataValues["breed_affection_level"]
+          breedObject[br].dataValues.breed_energy,
+          breedObject[br].dataValues.breed_exercise_req,
+          breedObject[br].dataValues.breed_ease_training,
+          breedObject[br].dataValues.breed_grooming_req,
+          breedObject[br].dataValues.breed_affection_level
         ];
         compareArray.push(breedArray);
       }
@@ -69,29 +69,29 @@ module.exports = function(app) {
           break;
         }
       }
-      console.log(breedObject[t].dataValues["breed_name"]);
-      res.json(breedObject[t].dataValues["breed_name"]);
+      console.log(breedObject[t].dataValues.breed_name);
+      res.json(breedObject[t].dataValues.breed_name);
     });
   });
   // Create a new breed
   app.post("/api/newbreed", function(req, res) {
     var routeName = breed.replace(/\s+/g, "").toLowerCase();
     db.Breed.create({
-        routeName: routeName,
-        breed_name: breed,
-        breed_energy: req.body.energy,
-        breed_exercise_req: req.body.exercise,
-        breed_ease_training: req.body.training,
-        breed_grooming_req: req.body.grooming,
-        breed_affection_level: req.body.affection,
-        breed_descript: req.body.description,
-        breed_photo: req.body.photo,
-        breed_link: req.body.link
-      })
-      .then(function (data) {
+      routeName: routeName,
+      breed_name: breed,
+      breed_energy: req.body.energy,
+      breed_exercise_req: req.body.exercise,
+      breed_ease_training: req.body.training,
+      breed_grooming_req: req.body.grooming,
+      breed_affection_level: req.body.affection,
+      breed_descript: req.body.description,
+      breed_photo: req.body.photo,
+      breed_link: req.body.link
+    })
+      .then(function(data) {
         res.json(data);
       })
-      .catch(function (err) {
+      .catch(function(err) {
         console.log(err);
         res.json(err);
       });
@@ -103,8 +103,8 @@ module.exports = function(app) {
       where: {
         breed_name: b
       }
-    }).then(function (data) {
+    }).then(function(data) {
       res.json(data);
     });
   });
-}
+};
