@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dog Breeds</title>
 </head>
-<body id="newBreeds">
+<body>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg==" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href= "./styles/foundation.css">
         <link rel="stylesheet" type="text/css" href= "./styles/styles.css">
@@ -14,7 +14,10 @@
             <meta http-equiv="x-ua-compatible" content="ie=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>Add a Breed</title>
+            <link rel="stylesheet" href="css/foundation.css" />
             <script src="https://code.jquery.com/jquery.js"></script>
+          </head>
+          <body>
                 <header class="subnav-hero-section">
                         <h1 class="subnav-hero-headline">BreedFinder</h1>
                         <ul class="subnav-hero-subnav">
@@ -39,7 +42,6 @@
                       <div class="row columns">
                         <label> Breed Energy (1-5): 
                           <select name="status" type="text" id="breedEnergy" required>
-                            <option selected value="">Choose...</option>
                             <option value=1>1 (No Energy)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -51,7 +53,6 @@
                       <div class="row columns">
                             <label> Breed Excercise (1-5): 
                               <select name="status" type="text" id="breedExcercise" required>
-                                <option selected value="">Choose...</option>
                                 <option value=1>1 (No Excercise)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -63,7 +64,6 @@
                         <div class="row columns">
                             <label> Breed Ease of Training (1-5): 
                                 <select name="status" type="text" id="breedTraining" required>
-                                    <option selected value="">Choose...</option>
                                     <option value=1>1 (Hard to Train)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -75,7 +75,6 @@
                         <div class="row columns">
                             <label> Breed Grooming (1-5): 
                                 <select name="status" type="text" id="breedGroom" required>
-                                    <option selected value="">Choose...</option>
                                     <option value=1> 1 (Easy to Groom)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -87,7 +86,6 @@
                          <div class="row columns">
                             <label> Breed Affection (1-5): 
                                 <select name="status" type="text" id="breedAffection" required>
-                                    <option selected value="">Choose...</option>
                                     <option value=1> 1 (Not Affectionate)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -113,7 +111,7 @@
                         </div>
                       <div class="row">
                       </div>
-                      <button type="submit" class="primary button expanded search-button" id="submit">
+                      <button type="button" class="primary button expanded search-button" id="submit">
                         Add Breed
                       </button>
                    </form>
@@ -137,7 +135,7 @@
 
     <script type="text/javascript">
       $("#submit").on("click", function (event) {
-        // event.preventDefault();
+        event.preventDefault();
         console.log("here form")
         
         var valAll = 
