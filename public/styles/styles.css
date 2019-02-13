@@ -8,9 +8,12 @@ h2{
 }
 
 .translucent-quiz-overlay {
-  max-width: 800px;
-  width: 100%;
+  width: 80%;
   background-color: rgba(54, 54, 54, 0.8);
   padding: 10px;
+  color: #fefefe;
+}
+
+.translucent-quiz-overlay label {
   color: #fefefe;
 }
