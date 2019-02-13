@@ -17,7 +17,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foundation Starter Template</title>
+  <title>View All Breeds</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <script src="https://code.jquery.com/jquery.js"></script>
   </head>
@@ -32,13 +32,15 @@
         <li><a href="/newbreed.html" class="is-active">Add a Breed</a></li>
       </ul>
     </header>
+    <br/>
+    <div class="grid-container"> 
     <container id="breeds">
       <table>
         <thead>
           <tr>
-            <th width="200">Breed Name</th>
-            <th width="200">Breed Description</th>
             <th width="200">Photo</th>
+            <th width="200">Breed Description</th>
+            <th width="200">Breed Name</th>
           </tr>
         </thead>
         <tbody>
@@ -46,6 +48,19 @@
         </tbody>
       </table>
     </container>
+    </div>
+    <br/>
+    <footer class="marketing-site-footer">
+      <div class="marketing-site-footer-bottom">
+        <div class="row large-unstack align-middle">
+          <div class="column">
+            <ul class="menu marketing-site-footer-bottom-links">
+              <li><a href="https://github.com/BriBuff/Pet">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -61,9 +76,9 @@
             var image = $("<img>").attr("src", data[i].breed_photo);
             
             tR.append(
+              $("<td>").append(image),
               $("<td>").text(data[i].breed_name),
-              $("<td>").text(data[i].breed_descript),
-              $("<td>").append(image)
+              $("<td>").text(data[i].breed_descript)
             );
             $("tbody").append(tR);
 
