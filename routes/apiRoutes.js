@@ -40,7 +40,9 @@ module.exports = function(app) {
         "breed_exercise_req",
         "breed_ease_training",
         "breed_grooming_req",
-        "breed_affection_level"
+        "breed_affection_level",
+        "breed_photo",
+        "breed_descript"
       ]
     }).then(function(dbExamples) {
       breedObject = dbExamples;
@@ -70,7 +72,13 @@ module.exports = function(app) {
         }
       }
       console.log(breedObject[t].dataValues.breed_name);
-      res.json(breedObject[t].dataValues.breed_name);
+      var resultBreed = {
+        breed_name: breedObject[t].dataValues.breed_name,
+        breed_photo: breedObject[t].dataValues.breed_photo,
+        breed_description: breedObject[t].dataValues.breed_descript
+      };
+      console.log(resultBreed);
+      res.json(JSON.stringify(resultBreed));
     });
   });
   // Create a new breed
