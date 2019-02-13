@@ -8,6 +8,7 @@ h2{
 }
 
 .translucent-quiz-overlay {
+  max-width: 800px;
   width: 100%;
   background-color: rgba(54, 54, 54, 0.8);
   padding: 10px;
