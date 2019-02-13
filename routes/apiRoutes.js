@@ -75,10 +75,8 @@ module.exports = function(app) {
   });
   // Create a new breed
   app.post("/api/newbreed", function(req, res) {
-    var routeName = breed.replace(/\s+/g, "").toLowerCase();
     db.Breed.create({
-      routeName: routeName,
-      breed_name: breed,
+      breed_name: req.body.breedName,
       breed_energy: req.body.energy,
       breed_exercise_req: req.body.exercise,
       breed_ease_training: req.body.training,
