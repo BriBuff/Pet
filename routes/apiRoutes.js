@@ -17,7 +17,9 @@ function compareArrays(arr1, arr2) {
 
 module.exports = function(app) {
   app.get("/api/allbreeds", function(req, res) {
-    db.Breed.findAll({}).then(function(dbExamples) {
+    db.Breed.findAll({
+      order: ["breed_name"]
+    }).then(function(dbExamples) {
       res.json(dbExamples);
     });
   });
