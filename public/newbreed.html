@@ -1,161 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dog Breeds</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dog Breeds</title>
 </head>
+
 <body id="newBreedsImg">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg==" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href= "./styles/foundation.css">
-        <link rel="stylesheet" type="text/css" href= "./styles/styles.css">
-            <meta charset="utf-8" />
-            <meta http-equiv="x-ua-compatible" content="ie=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Add a Breed</title>
-            <title>Foundation Starter Template</title>
-            <link rel="stylesheet" href="css/foundation.css" />
-            <script src="https://code.jquery.com/jquery.js"></script>
-                <header class="subnav-hero-section">
-                        <h1 class="subnav-hero-headline">BreedFinder</h1>
-                        <ul class="subnav-hero-subnav">
-                          <li><a href="/" class="is-active">Home</a></li>
-                          <li><a href="/quiz.html" class="is-active">Take the Quiz</a></li>
-                          <li><a href="/breeds.html" class="is-active">See All Breeds</a></li>
-                          <li><a href="/newbreed.html" class="is-active">Add a Breed</a></li>
-                        </ul>
-                      </header>
-                      <div class="grid-container">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css"
+    integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg=="
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./styles/foundation.css">
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add a Breed</title>
+  <title>Foundation Starter Template</title>
+  <link rel="stylesheet" href="css/foundation.css" />
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <header class="subnav-hero-section">
+    <h1 class="subnav-hero-headline">BreedFinder</h1>
+    <ul class="subnav-hero-subnav">
+      <li><a href="/" class="is-active">Home</a></li>
+      <li><a href="/quiz.html" class="is-active">Take the Quiz</a></li>
+      <li><a href="/breeds.html" class="is-active">See All Breeds</a></li>
+      <li><a href="/newbreed.html" class="is-active">Add a Breed</a></li>
+    </ul>
+  </header>
+  <div class="grid-container">
 
-        <br>
+    <br>
 
-            <div class="translucent-form-overlay">
-                    <form action="/breeds.html" method="post" id="form">
-                      <h3>Add a New Breed!</h3>
-                      <div class="row columns">
-                        <label>Breed Name:
-                          <input type="text" id= "breedName" name="breedName" placeholder="Breed Name" required>
-                        </label>
-                      </div>
-                      <div class="row columns">
-                        <label> Breed Energy (1-5): 
-                          <select name="status" type="text" id="breedEnergy" required>
-                            <option value="">Choose...</option>
-                            <option value=1>1 (No Energy)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Abundance of Energy)</option>
-                          </select>
-                        </label>
-                      </div>
-                      <div class="row columns">
-                            <label> Breed Excercise (1-5): 
-                              <select name="status" type="text" id="breedExcercise" required>
-                                <option value="">Choose...</option>
-                                <option value=1>1 (No Excercise)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5 (Excercise Required)</option>
-                              </select>
-                            </label>
-                          </div>
-                        <div class="row columns">
-                            <label> Breed Ease of Training (1-5): 
-                                <select name="status" type="text" id="breedTraining" required>
-                                    <option value="">Choose...</option>
-                                    <option value=1>1 (Hard to Train)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (Easy to Train)</option>
-                                  </select>
-                                </label>
-                              </div>
-                        <div class="row columns">
-                            <label> Breed Grooming (1-5): 
-                                <select name="status" type="text" id="breedGroom" required>
-                                    <option value="">Choose...</option>
-                                    <option value=1> 1 (Easy to Groom)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (Hard to Groom)</option>
-                                </select>
-                                    </label>
-                                  </div>
-                         <div class="row columns">
-                            <label> Breed Affection (1-5): 
-                                <select name="status" type="text" id="breedAffection" required>
-                                    <option value="">Choose...</option>
-                                    <option value=1> 1 (Not Affectionate)</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5 (Very Affectionate)</option>
-                                </select>
-                                    </label>
-                                  </div>
-                      <div class="row columns">
-                        <label>Breed Description
-                          <input type="text" name="description" id="breedDescript" placeholder="This breed is known for..." required>
-                        </label>
-                      </div>
-                      <div class="row columns">
-                          <label>Breed Picture Link
-                            <input type="text" name="pic_link" id="breedPicLink" placeholder="Picture Link" required>
-                          </label>
-                      </div>
-                        <div class="row columns">
-                          <label>Breed Link
-                              <input type="text" name="link" id="breedLink" placeholder="Breed Link" required>
-                            </label>
-                        </div>
-                      <div class="row">
-                      </div>
-                      <button type="button" class="primary button expanded search-button" id="submit">
-                        Add Breed
-                      </button>
-                   </form>
-                  </div>
-                  
-                  
-                  
+    <div class="translucent-form-overlay">
+      <form action="/breeds.html" method="post" id="form">
+        <h3>Add a New Breed!</h3>
+        <div class="row columns">
+          <label>Breed Name:
+            <input type="text" id="breedName" name="breedName" placeholder="Breed Name" required>
+          </label>
+        </div>
+        <div class="row columns">
+          <label> Breed Energy (1-5):
+            <select name="status" type="text" id="breedEnergy" required>
+              <option value="">Choose...</option>
+              <option value=1>1 (No Energy)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Abundance of Energy)</option>
+            </select>
+          </label>
+        </div>
+        <div class="row columns">
+          <label> Breed Excercise (1-5):
+            <select name="status" type="text" id="breedExcercise" required>
+              <option value="">Choose...</option>
+              <option value=1>1 (No Excercise)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Excercise Required)</option>
+            </select>
+          </label>
+        </div>
+        <div class="row columns">
+          <label> Breed Ease of Training (1-5):
+            <select name="status" type="text" id="breedTraining" required>
+              <option value="">Choose...</option>
+              <option value=1>1 (Hard to Train)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Easy to Train)</option>
+            </select>
+          </label>
+        </div>
+        <div class="row columns">
+          <label> Breed Grooming (1-5):
+            <select name="status" type="text" id="breedGroom" required>
+              <option value="">Choose...</option>
+              <option value=1> 1 (Easy to Groom)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Hard to Groom)</option>
+            </select>
+          </label>
+        </div>
+        <div class="row columns">
+          <label> Breed Affection (1-5):
+            <select name="status" type="text" id="breedAffection" required>
+              <option value="">Choose...</option>
+              <option value=1> 1 (Not Affectionate)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Very Affectionate)</option>
+            </select>
+          </label>
+        </div>
+        <div class="row columns">
+          <label>Breed Description
+            <input type="text" name="description" id="breedDescript" placeholder="This breed is known for..." required>
+          </label>
+        </div>
+        <div class="row columns">
+          <label>Breed Picture Link
+            <input type="text" name="pic_link" id="breedPicLink" placeholder="Picture Link" required>
+          </label>
+        </div>
+        <div class="row columns">
+          <label>Breed Link
+            <input type="text" name="link" id="breedLink" placeholder="Breed Link" required>
+          </label>
+        </div>
+        <div class="row">
+        </div>
+        <button type="button" class="primary button expanded search-button" id="submit">
+          Add Breed
+        </button>
+      </form>
+    </div>
+
+
+
 
     </container>
 
     <script type="text/javascript">
-    
       $("#submit").on("click", function (event) {
         event.preventDefault();
         console.log("here form")
 
-        if (valAll.name === " ", valAll.energy === " ", valAll.excercise === " ", valAll.training === " ", valAll.grooming === " ", valAll.affection === " ", valAll.description === " ", valAll.photo === " ", valAll.link === " ") {
-        alert("Please complete the form.")
-      }
-      else {
-        var valAll = 
-        {
-          name: $("#breedName").val().trim(),
-          energy: $("#breedEnergy").val().trim(),
-          exercise: $("#breedExcercise").val().trim(),
-          training: $("#breedTraining").val().trim(),
-          grooming: $("#breedGroom").val().trim(),
-          affection: $("#breedAffection").val().trim(),
-          description: $("#breedDescript").val().trim(),
-          photo: $("#breedPicLink").val().trim(),
-          link: $("#breedLink").val().trim()
-      };
-      console.log(valAll);
-        $.post("/api/newbreed", valAll, function (data){
-           alert("New breed added!");
-        });
-      };
+
+        if (!$("#breedName").val() || 
+          !$("#breedEnergy").val() ||
+          !$("#breedExcercise").val() || 
+          !$("#breedTraining").val() ||
+          !$("#breedGroom").val() || 
+          !$("#breedAffection").val() || 
+          !$("#breedDescript").val() ||
+          !$("#breedPicLink").val() || 
+          !$("#breedLink").val()) {
+          alert("Please complete the form.")
+        } else {
+          var valAll = {
+            name: $("#breedName").val().trim(),
+            energy: $("#breedEnergy").val().trim(),
+            exercise: $("#breedExcercise").val().trim(),
+            training: $("#breedTraining").val().trim(),
+            grooming: $("#breedGroom").val().trim(),
+            affection: $("#breedAffection").val().trim(),
+            description: $("#breedDescript").val().trim(),
+            photo: $("#breedPicLink").val().trim(),
+            link: $("#breedLink").val().trim()
+          };
+          console.log(valAll);
+          $.post("/api/newbreed", valAll, function (data) {
+            alert("New breed added!");
+          });
+        };
 
       });
     </script>
-    
+
 </body>
+
 </html>

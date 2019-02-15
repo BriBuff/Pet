@@ -86,7 +86,7 @@ module.exports = function(app) {
   // Create a new breed
   app.post("/api/newbreed", function(req, res) {
     db.Breed.create({
-      breed_name: req.body.breedName,
+      breed_name: req.body.name,
       breed_energy: req.body.energy,
       breed_exercise_req: req.body.exercise,
       breed_ease_training: req.body.training,
