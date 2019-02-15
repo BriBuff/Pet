@@ -3,25 +3,25 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    // db.breed.findAll({}).then(function(dbExamples) {
-    //   res.render("index", {
-    //     msg: "Welcome!",
-    //     examples: dbExamples
-      // });
-    // });
+    db.breed.findAll({}).then(function(dbExamples) {
+      res.render("index", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
     res.json();
   });
 
   // Load example page and pass in an example by id
-  // app.get("/breed/:id", function(req, res) {
-  //   db.breed
-  //     .findOne({ where: { id: req.params.id } })
-  //     .then(function(dbExample) {
-  //       res.render("example", {
-  //         example: dbExample
-  //       });
-  //     });
-  // });
+  app.get("/breed/:id", function(req, res) {
+    db.breed
+      .findOne({ where: { id: req.params.id } })
+      .then(function(dbExample) {
+        res.render("example", {
+          example: dbExample
+        });
+      });
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
