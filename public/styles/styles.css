@@ -7,6 +7,17 @@ h2{
  
 }
 
+#myModal{
+  display: none;
+  width: 80%;
+  padding-left: 450px;
+  padding-bottom: 20px;
+  
+}
+/* .modalImage {
+  float: right;
+} */
+
 .translucent-quiz-overlay {
   width: 80%;
   background-color: rgba(54, 54, 54, 0.8);
