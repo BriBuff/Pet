@@ -145,7 +145,7 @@
         var object = JSON.parse(data);
         console.log(object.breed_name);
         $(".grid-container").css("display", "none");
-        var theBreed = "Your breed: " + object.breed_name;
+        var theBreed = "Your Breed: " + object.breed_name;
         var brdDescript = object.breed_description;
         var image = $("<img>").attr("src", object.breed_photo);
         $(image).addClass("modalImage");
