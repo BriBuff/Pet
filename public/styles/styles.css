@@ -1,7 +1,7 @@
 /* Add New Breed */
 
 #newBreedsImg {
-   background-image: url("");
+   background-image: url("../images/field.jpg");
    background-position: center;
    background-repeat: no-repeat;
 }
@@ -18,9 +18,20 @@ h2{
 #myModal{
   display: none;
   width: 80%;
-  padding-left: 450px;
+  padding-left: 275px;
   padding-bottom: 20px;
-  
+  text-align: center;
+}
+
+.textSection {
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.imgSection {
+  display: inline-block;
+}
+.close-reveal-modal{
+  font-size: 15px;
 }
 
 .translucent-quiz-overlay {

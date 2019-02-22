@@ -9,6 +9,7 @@ module.exports = function(app) {
         examples: dbExamples
       });
     });
+    res.json();
   });
 
   // Load example page and pass in an example by id
