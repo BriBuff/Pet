@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dog Breeds</title>
+</head>
+<body>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg==" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href= "./styles/foundation.css">
+        <link rel="stylesheet" type="text/css" href= "./styles/styles.css">
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Add a Breed</title>
+            <title>Foundation Starter Template</title>
+            <link rel="stylesheet" href="css/foundation.css" />
+            <script src="https://code.jquery.com/jquery.js"></script>
+                <header class="subnav-hero-section">
+                        <h1 class="subnav-hero-headline">BreedFinder</h1>
+                        <ul class="subnav-hero-subnav">
+                          <li><a href="/" class="is-active">Home</a></li>
+                          <li><a href="/quiz.html" class="is-active">Take the Quiz</a></li>
+                          <li><a href="/breeds.html" class="is-active">See All Breeds</a></li>
+                          <li><a href="/newbreed.html" class="is-active">Add a Breed</a></li>
+                          <li><a href="/newbreed.html" class="is-active">Find A Dog</a></li>
+                        </ul>
+                      </header>
+                      <div class="grid-container">
+
+                            <div class="container align-center">
+                                    <h2 class="search text-center">Search</h2>
+                                    <form class="basic-search text-center">
+                                        <div class="grid-container">
+                                            <div class="grid-x grid-padding-x align-center">
+                                                <div class="medium-4 cell">
+                                                    <label>Zip Code
+                                                        <input class="input-field" type="text" placeholder="Zip Code">
+                                                    </label>
+                            
+                                                </div>
+                            
+                                            </div>
+                                            <a id="submit-btn" class="button success submit text-center" href="#">Submit</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            
+                                <div class="featured-image-block-grid search-results">
+                                    <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
+                                        <h2>Results</h2>
+                                        <p>Your furever friend is:</p>
+                                    </div>
+                            
+                            
+                                    <br><br>
+                            
+                                        <div id="first" class="grid-container">
+                                            
+                                        </div>       
+                                    </div>
+                            
+                            
+                                </div>
+                            
+                      </div>
+
+        <br>
+
+    <script>
+    $("#submit-btn").on("click", function (event) {
+    event.preventDefault();
+    var userInput = $(".input-field").val().trim();
+
+
+
+
+
+    console.log(userInput);
+    //Initalize PetFinder API
+    var petAPI = "http://api.petfinder.com/pet.find?key=cdbce0163d4b880f2c38c1635e5c4544&animal=dog&location=" + userInput + "&output=basic&format=json&count=10";
+
+
+
+    $.ajax({
+      url: petAPI,
+      method: "GET"
+    }).then(function (response) {
+
+      console.log(response);
+      cosnole.log(petAPI);
+
+      var results = response.data;
+      console.log(results);
+
+
+          //Puts image and name and other parameters into html
+        //   var image = $("<img>");
+        //   image.attr("src", response.trails[j].imgMedium);
+        //   console.log("image" + response.trails[j].imgMedium);
+        //   image.addClass("card-image");
+        //   var name = (response.trails[j].name);
+        //   // Makes the trail name a link to REI hiking trail webiste of desired trail
+        //   var nameUrl = '<h4><a href="' + url + '">"' + name + '"</a><h4>';
+        //   var summary = $("<p>").text("Trail Summary: " + response.trails[j].summary);
+        //   var loc = $("<p>").text("Location: " + response.trails[j].location);
+        //   var leng = $("<p>").text("Length of Trail: " + response.trails[j].length + " miles");
+        //   var dif = $("<p>").text("Trail Difficulty: " + response.trails[j].difficulty);
+        //   var co = $("<p>").text("Trail Status: " + response.trails[j].conditionStatus);
+        //   var deet = $("<p>").text("Trail Condition: " + response.trails[j].conditionDetails);
+
+        //   var b = $("<br><br>");
+
+          // Creates card div
+        //   var newCell = $("<div>");
+        //   newCell.addClass("cell");
+        //   var newCard = $("<div>");
+        //   newCard.addClass("card searchCard");
+        //   newCard.append(image, nameUrl,loc, summary, leng, dif, co, deet, b);
+
+        //   newCell.append(newCard);
+
+
+
+
+
+          $("#first").prepend(newCell);
+
+
+
+          // for loop that makes the images into links to result page
+        //   var images = document.getElementsByTagName("img");
+        //   for (var k = 0; k < images.length; k++) {
+        //     var imageI = images[k];
+        //     imageI.onclick = function (event) {
+        //       window.location.href = this.id + '../Group-Project-1/results.html';
+        //       var im = $("<img>");
+
+        //       //thi isnt adding the source of the image
+        //       im.attr("src", images[k]);
+
+        //       //need help looking within this new document
+
+        //       this.$("#img").append(im);
+
+
+
+
+
+
+
+
+            // };
+        //   };
+
+        // };
+
+      });
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+  // clears user input field 
+  userInput = $(".input-field").val("");
+
+
+
+
+  $(".submit").on("click", function () {
+
+    $(".search-results").show();
+  });
+    
+    
+    
+    </script>   
+    
+</body>
+</html>

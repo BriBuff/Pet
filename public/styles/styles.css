@@ -22,9 +22,6 @@ h2{
   padding-bottom: 20px;
   
 }
-/* .modalImage {
-  float: right;
-} */
 
 .translucent-quiz-overlay {
   width: 80%;
@@ -35,4 +32,11 @@ h2{
 
 .translucent-quiz-overlay label {
   color: #fefefe;
+}
+
+/* Search Button */
+
+#submit-btn {
+  background-color: #1779ba;
+  color: white;
 }
