@@ -35,7 +35,7 @@
                                         <div class="grid-container">
                                             <div class="grid-x grid-padding-x align-center">
                                                 <div class="medium-4 cell">
-                                                    <label>Zip Code
+                                                    <label>Enter A Zip Code
                                                         <input class="input-field" type="text" placeholder="Zip Code">
                                                     </label>
                             
@@ -85,81 +85,41 @@
 
     $.ajax({
       url: petAPI,
-      method: "GET"
+      method: "GET",
+      dataType: "jsonp"
     }).then(function (response) {
 
       console.log(response);
-      cosnole.log(petAPI);
+      console.log(petAPI);
 
-      var results = response.data;
-      console.log(results);
-
-
-          //Puts image and name and other parameters into html
-        //   var image = $("<img>");
-        //   image.attr("src", response.trails[j].imgMedium);
-        //   console.log("image" + response.trails[j].imgMedium);
-        //   image.addClass("card-image");
-        //   var name = (response.trails[j].name);
-        //   // Makes the trail name a link to REI hiking trail webiste of desired trail
-        //   var nameUrl = '<h4><a href="' + url + '">"' + name + '"</a><h4>';
-        //   var summary = $("<p>").text("Trail Summary: " + response.trails[j].summary);
-        //   var loc = $("<p>").text("Location: " + response.trails[j].location);
-        //   var leng = $("<p>").text("Length of Trail: " + response.trails[j].length + " miles");
-        //   var dif = $("<p>").text("Trail Difficulty: " + response.trails[j].difficulty);
-        //   var co = $("<p>").text("Trail Status: " + response.trails[j].conditionStatus);
-        //   var deet = $("<p>").text("Trail Condition: " + response.trails[j].conditionDetails);
-
-        //   var b = $("<br><br>");
-
-          // Creates card div
-        //   var newCell = $("<div>");
-        //   newCell.addClass("cell");
-        //   var newCard = $("<div>");
-        //   newCard.addClass("card searchCard");
-        //   newCard.append(image, nameUrl,loc, summary, leng, dif, co, deet, b);
-
-        //   newCell.append(newCard);
+      var results = response.petfinder.pets;
+      console.log("results", results);
 
 
+    //   for (var a = 0; a < results.length; a++) {
+    //         var newDog = $("<div>");
+    //         newDog.addClass("newDog");
 
+    //         var dogImg = results[a].media.photos.photo[0].$t;
+    //         var dogDescript = results[a].description.$t;
+    //         var dogName = results[a].name.$t;
+    //         var dogBreed = results[a].breeds.breed[0].$t;
+    //         var dogAge = results[a].age.$t;
+    //         var dogLink = results[a].contact.email.$t;
 
+    //         console.log ("here", dogImg);
+            
+    //         var dImg = $("<img>");
+    //         dImg.attr("src", dogImg);
+    //         dImg.addClass("dogImg");
+    //         dImg.attr("alt", "Dog IMG");
 
-          $("#first").prepend(newCell);
+    //         var gifRating = $("<p>").text("Rating: " + results[a].rating.toUpperCase());
+    //         newGif.append(gifRating);
 
-
-
-          // for loop that makes the images into links to result page
-        //   var images = document.getElementsByTagName("img");
-        //   for (var k = 0; k < images.length; k++) {
-        //     var imageI = images[k];
-        //     imageI.onclick = function (event) {
-        //       window.location.href = this.id + '../Group-Project-1/results.html';
-        //       var im = $("<img>");
-
-        //       //thi isnt adding the source of the image
-        //       im.attr("src", images[k]);
-
-        //       //need help looking within this new document
-
-        //       this.$("#img").append(im);
-
-
-
-
-
-
-
-
-            // };
-        //   };
-
-        // };
-
-      });
-
-
-    });
+    //         $("#anime-gif").prepend(newGif);
+    //     }
+        });
 
 
 
@@ -181,6 +141,8 @@
 
     $(".search-results").show();
   });
+
+});
     
     
     
