@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dog Breeds</title>
+    <title>Find A Dog</title>
 </head>
 <body>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg==" crossorigin="anonymous">
@@ -13,8 +13,6 @@
             <meta charset="utf-8" />
             <meta http-equiv="x-ua-compatible" content="ie=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Add a Breed</title>
-            <title>Foundation Starter Template</title>
             <link rel="stylesheet" href="css/foundation.css" />
             <script src="https://code.jquery.com/jquery.js"></script>
                 <header class="subnav-hero-section">
@@ -30,6 +28,7 @@
                       <div class="grid-container">
 
                             <div class="container align-center">
+                                <br>
                                     <h2 class="search text-center">Search</h2>
                                     <form class="basic-search text-center">
                                         <div class="grid-container">
@@ -56,7 +55,18 @@
                             
                                     <br><br>
                             
-                                        <div id="first" class="grid-container">
+                                    <table>
+                                        <thead>
+                                          <tr>
+                                            <th width="200">Photo</th>
+                                            <th width="200">Information</th>
+                                            <th width="200">Contact</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                
+                                        </tbody>
+                                      </table>
                                             
                                         </div>       
                                     </div>
@@ -92,33 +102,25 @@
       console.log(response);
       console.log(petAPI);
 
-      var results = response.petfinder.pets;
+      var results = response.petfinder.pets.pet;
       console.log("results", results);
 
-
-    //   for (var a = 0; a < results.length; a++) {
-    //         var newDog = $("<div>");
-    //         newDog.addClass("newDog");
-
-    //         var dogImg = results[a].media.photos.photo[0].$t;
-    //         var dogDescript = results[a].description.$t;
-    //         var dogName = results[a].name.$t;
-    //         var dogBreed = results[a].breeds.breed[0].$t;
-    //         var dogAge = results[a].age.$t;
-    //         var dogLink = results[a].contact.email.$t;
-
-    //         console.log ("here", dogImg);
-            
-    //         var dImg = $("<img>");
-    //         dImg.attr("src", dogImg);
-    //         dImg.addClass("dogImg");
-    //         dImg.attr("alt", "Dog IMG");
-
-    //         var gifRating = $("<p>").text("Rating: " + results[a].rating.toUpperCase());
-    //         newGif.append(gifRating);
-
-    //         $("#anime-gif").prepend(newGif);
-    //     }
+      for (var i = 0; i < results.length; i++) {
+            var tR = $("<tr>");
+            var image = $("<img>").attr("src", results[i].media.photos.photo[2].$t);
+            var name = "Name: " + results[i].name.$t
+            var age = "Age: " + results[i].age.$t
+            var sex = "Sex: " + results[i].sex.$t
+            var description = "Description: " + results[i].description.$t
+            var contact = "Contact: " + results[i].contact.email.$t
+            tR.append(
+              $("<td>").append(image),
+              $("<td>").html(name + "<br>" + age + "<br>" + sex + "<br>" + description),
+              $("<td>").text(contact),
+            );
+            $("tbody").append(tR);
+           
+          }
         });
 
 
