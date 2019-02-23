@@ -1,6 +1,6 @@
 # Pet
 
-##Description
+Description:
 
 This app has been created to find the perfect breed for you! Take the quiz and find out your compatible furever friend. 
 
@@ -15,13 +15,13 @@ App Link: https://powerful-headland-93891.herokuapp.com/
 
 Video Test Run:
 
-##Stretch Goals
+Stretch Goals:
 
 Link the site to the PetFinder API so users can look up dogs in their area matching their breed (as opposed to dogs in their area).
 
 Logging their results to a table so they can easily compare their results if they want to take the quiz multiple times.
 
-##Challenges
+Challenges:
 
 Front-End:
     *Trying to get the Foundations modal to populate. We couldn't seem to find the correct JS to make it pop up and/or it wouldn't hide the modal information inside the modal.
@@ -36,11 +36,11 @@ Back-End:
         *Trying to get rid of Handlebars, which was only used in our project for errors. Deleting Handlebars code stopped the entire application from running.
 
 
-##Responsibilities
+Responsibilities:
 
 This group project had us separated as database/paths (Bri), modal/controller (Jess), and view (Andrea). However, we all worked on pieces of each other's work.
 
-##Particulars
+Particulars:
 
 Front-End Framework: Zurb Foundation
 
