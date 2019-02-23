@@ -14,7 +14,7 @@ Video Test Run:
 
 #Stretch Goals
 
-Link the site to the PetFinder API so users can look up dogs in their area matching their breed.
+Link the site to the PetFinder API so users can look up dogs in their area matching their breed (as opposed to dogs in their area).
 
 Logging their results to a table so they can easily compare their results if they want to take the quiz multiple times.
 
@@ -22,7 +22,7 @@ Logging their results to a table so they can easily compare their results if the
 
 Front-End:
 
-Back-End:
+Back-End: Trying to get the Petfinder API to generate- this is where utilizing JSONP became essential. 
 
 #Responsibilities
 
@@ -36,4 +36,6 @@ Built In Breeds: Akita, Beagle, Chihuaha, Dachsund, Doberman Pinscher, English B
 
 Code Used: HTML, CSS, JavaScript, JQuery, mySQL, Node.js
 
-Packages Used: Express, mysql, sequelize, ESLint, Chai, Mocha
+API: Petfinder (utilizing JSONP)
+
+Packages Used: Express, mysql, sequelize, ESLint, Handlebars-Express (for errors)
