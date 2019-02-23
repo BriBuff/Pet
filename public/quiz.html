@@ -23,6 +23,7 @@
       <li><a href="/quiz.html" class="is-active">Take the Quiz</a></li>
       <li><a href="/breeds.html" class="is-active">See All Breeds</a></li>
       <li><a href="/newbreed.html" class="is-active">Add a Breed</a></li>
+      <li><a href="/search.html" class="is-active">Find A Dog</a></li>
     </ul>
   </header>
   <br />
@@ -99,10 +100,10 @@
   <br />
 
   <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-    
+
     <div class="modalDiv"></div>
     <a href="/quiz.html" class="close-reveal-modal" aria-label="Close"><strong>&#215;</strong></a>
-    
+
   </div>
 
   <footer class="marketing-site-footer">
@@ -116,12 +117,6 @@
       </div>
     </div>
   </footer>
-  
-
-  <!-- <script src="js/vendor/jquery.js"></script> -->
-  <!-- <script src="js/vendor/what-input.js"></script> -->
-  <!-- <script src="js/vendor/foundation.min.js"></script> -->
-  <!-- <script> src="./public/styles/foundation.css"</script> -->
 
   <script>
     $(".primary").on("click", function (event) {
@@ -139,7 +134,7 @@
         survey: surveyArray
       };
 
- 
+
       $.post("/quiz", obj, function (data) {
         console.log(data);
         var object = JSON.parse(data);

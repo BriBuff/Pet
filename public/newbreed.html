@@ -28,6 +28,7 @@
       <li><a href="/quiz.html" class="is-active">Take the Quiz</a></li>
       <li><a href="/breeds.html" class="is-active">See All Breeds</a></li>
       <li><a href="/newbreed.html" class="is-active">Add a Breed</a></li>
+      <li><a href="/search.html" class="is-active">Find A Dog</a></li>
     </ul>
   </header>
   <div class="grid-container">
@@ -136,14 +137,14 @@
         console.log("here form")
 
 
-        if (!$("#breedName").val() || 
+        if (!$("#breedName").val() ||
           !$("#breedEnergy").val() ||
-          !$("#breedExcercise").val() || 
+          !$("#breedExcercise").val() ||
           !$("#breedTraining").val() ||
-          !$("#breedGroom").val() || 
-          !$("#breedAffection").val() || 
+          !$("#breedGroom").val() ||
+          !$("#breedAffection").val() ||
           !$("#breedDescript").val() ||
-          !$("#breedPicLink").val() || 
+          !$("#breedPicLink").val() ||
           !$("#breedLink").val()) {
           alert("Please complete the form.")
         } else {

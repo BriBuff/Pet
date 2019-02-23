@@ -44,3 +44,10 @@ h2{
 .translucent-quiz-overlay label {
   color: #fefefe;
 }
+
+/* Search Button */
+
+#submit-btn {
+  background-color: #1779ba;
+  color: white;
+}

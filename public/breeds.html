@@ -30,26 +30,27 @@
         <li><a href="/quiz.html" class="is-active">Take the Quiz</a></li>
         <li><a href="/breeds.html" class="is-active">See All Breeds</a></li>
         <li><a href="/newbreed.html" class="is-active">Add a Breed</a></li>
+        <li><a href="/search.html" class="is-active">Find A Dog</a></li>
       </ul>
     </header>
-    <br/>
-    <div class="grid-container"> 
-    <container id="breeds">
-      <table>
-        <thead>
-          <tr>
-            <th width="200">Photo</th>
-            <th width="200">Breed Name</th>
-            <th width="200">Breed Description</th>
-          </tr>
-        </thead>
-        <tbody>
+    <br />
+    <div class="grid-container">
+      <container id="breeds">
+        <table>
+          <thead>
+            <tr>
+              <th width="200">Photo</th>
+              <th width="200">Breed Name</th>
+              <th width="200">Breed Description</th>
+            </tr>
+          </thead>
+          <tbody>
 
-        </tbody>
-      </table>
-    </container>
+          </tbody>
+        </table>
+      </container>
     </div>
-    <br/>
+    <br />
     <footer class="marketing-site-footer">
       <div class="marketing-site-footer-bottom">
         <div class="row large-unstack align-middle">
@@ -69,12 +70,12 @@
           url: "/api/allbreeds",
           method: "GET"
         }).then(function (data) {
-         
+
 
           for (var i = 0; i < data.length; i++) {
             var tR = $("<tr>");
             var image = $("<img>").attr("src", data[i].breed_photo);
-            
+
             tR.append(
               $("<td>").append(image),
               $("<td>").text(data[i].breed_name),
