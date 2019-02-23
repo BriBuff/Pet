@@ -35,6 +35,9 @@ Back-End:
         *Trying to get the JS/Jquery to be stored in a separate file and still interact with the HTML page. Everytime the JS/Jquery was moved, it would error out.
         *Trying to get rid of Handlebars, which was only used in our project for errors. Deleting Handlebars code stopped the entire application from running.
 
+    Deployment/Merging:
+        *Merging using Travis CI on GitHub- took awhile for us to figure out how to correct the code to make it so that Travis CI was happy with it. Mostly just spacing errors.
+        *Heroku Deployment- Even with JAWSDB connecting our project, JAWSDB wasn't connecting to our table, but instead was connecting to our values from within the table. Had to call the information differently in the SQL database to get our information to pop up.
 
 Responsibilities:
 
