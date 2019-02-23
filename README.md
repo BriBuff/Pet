@@ -32,12 +32,12 @@ Back-End:
     Getting the New Breed form to be required. The required HTML on the input/label fields weren't being read. There were a couple different ways to try to fix this. First, we tried to use a combined validation using HTML, CSS, and JS, but in the end stuck with a basic JQuery function to make the fields required.
 
     "Cleaning" the code:
-        1. Trying to get the JS/Jquery to be stored in a separate file and still interact with the HTML page. Everytime the JS/Jquery was moved, it would error out.
-        2. Trying to get rid of Handlebars, which was only used in our project for errors. Deleting Handlebars code stopped the entire application from running.
+    1. Trying to get the JS/Jquery to be stored in a separate file and still interact with the HTML page. Everytime the JS/Jquery was moved, it would error out.
+    2. Trying to get rid of Handlebars, which was only used in our project for errors. Deleting Handlebars code stopped the entire application from running.
 
     Deployment/Merging:
-        1. Merging using Travis CI on GitHub- took awhile for us to figure out how to correct the code to make it so that Travis CI was happy with it. Mostly just spacing errors.
-        2. Heroku Deployment- Even with JAWSDB connecting our project, JAWSDB wasn't connecting to our table, but instead was connecting to our values from within the table. Had to call the information differently in the SQL database to get our information to pop up.
+    1. Merging using Travis CI on GitHub- took awhile for us to figure out how to correct the code to make it so that Travis CI was happy with it. Mostly just spacing errors.
+    2. Heroku Deployment- Even with JAWSDB connecting our project, JAWSDB wasn't connecting to our table, but instead was connecting to our values from within the table. Had to call the information differently in the SQL database to get our information to pop up.
 
 Responsibilities:
 
