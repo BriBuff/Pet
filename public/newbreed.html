@@ -143,8 +143,7 @@
     <script type="text/javascript">
       $("#submit").on("click", function (event) {
         event.preventDefault();
-        console.log("here form")
-
+        
 
         if (!$("#breedName").val() ||
           !$("#breedEnergy").val() ||
@@ -168,7 +167,6 @@
             photo: $("#breedPicLink").val().trim(),
             link: $("#breedLink").val().trim()
           };
-          console.log(valAll);
           $.post("/api/newbreed", valAll, function (data) {
             alert("New breed added!");
           });
