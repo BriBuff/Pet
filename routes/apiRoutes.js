@@ -28,11 +28,9 @@ module.exports = function(app) {
     var survey = req.body;
     var sArray = [];
     for (var s in survey) {
-      //console.log(survey[s]);
       for (var i = 0; i < survey[s].length; i++) {
         sArray.push(survey[s][i]);
       }
-      console.log(sArray);
     }
 
     db.Breed.findAll({
@@ -61,25 +59,19 @@ module.exports = function(app) {
       var sumArray = [];
 
       for (var j = 0; j < compareArray.length; j++) {
-        console.log(compareArray[j]);
         sumArray.push(compareArrays(compareArray[j], sArray));
       }
-      console.log("sumArray: " + sumArray);
       var num = Math.min.apply(null, sumArray);
-      console.log(num);
       for (var t = 0; t < sumArray.length; t++) {
         if (sumArray[t] === num) {
-          console.log("index: " + t);
           break;
         }
       }
-      console.log(breedObject[t].dataValues.breed_name);
       var resultBreed = {
         breed_name: breedObject[t].dataValues.breed_name,
         breed_photo: breedObject[t].dataValues.breed_photo,
         breed_description: breedObject[t].dataValues.breed_descript
       };
-      console.log(resultBreed);
       res.json(JSON.stringify(resultBreed));
     });
   });
