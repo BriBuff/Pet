@@ -128,16 +128,13 @@
         $(".q4 .res:checked").val(),
         $(".q5 .res:checked").val()
       ];
-      console.log(surveyArray);
       var obj = {
         survey: surveyArray
       };
 
 
       $.post("/quiz", obj, function (data) {
-        console.log(data);
         var object = JSON.parse(data);
-        console.log(object.breed_name);
         $(".grid-container").css("display", "none");
         var theBreed = "Your Breed: " + object.breed_name;
         var brdDescript = object.breed_description;

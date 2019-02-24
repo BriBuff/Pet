@@ -58,4 +58,4 @@ Code Used: HTML, CSS, JavaScript, JQuery, mySQL, Node.js
 
 API: Petfinder (utilizing JSONP)
 
-Packages Used: Express, mysql, sequelize, ESLint, Handlebars-Express (for errors)
+Packages Used: Express, mysql, sequelize, ESLint
