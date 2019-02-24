@@ -21,10 +21,13 @@ Link the site to the PetFinder API so users can look up dogs in their area match
 
 Logging their results to a table so they can easily compare their results if they want to take the quiz multiple times.
 
+Users are able to create accounts to save their quiz results and information.
+
 Challenges:
 
 Front-End:
     *Trying to get the Foundations modal to populate. We couldn't seem to find the correct JS to make it pop up and/or it wouldn't hide the modal information inside the modal.
+    * Had trouble with validation on quiz (again issues witht the Foundation JS)
 
 Back-End: 
     Trying to get the Petfinder API to generate- this is where utilizing JSONP became essential in addition to making sure that the API URL was https:// and not http://. If it was the latter, there was a mixed media error on Heroku- even though it was working locally with http://.
