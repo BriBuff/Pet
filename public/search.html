@@ -65,7 +65,7 @@
             <th width="200">Contact</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tableBody">
 
         </tbody>
       </table>
@@ -77,6 +77,7 @@
   <script>
     $("#submit-btn").on("click", function (event) {
       event.preventDefault();
+      $("#tableBody").find("tr").remove();
       var userInput = $(".input-field").val().trim();
 
       key = "cdbce0163d4b880f2c38c1635e5c4544";
