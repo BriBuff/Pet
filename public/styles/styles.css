@@ -6,6 +6,12 @@
    background-repeat: no-repeat;
 }
 
+#quizImg {
+  background-image: url("../images/mountain_dog.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -17,25 +23,28 @@ h2{
 
 #myModal{
   display: none;
-  width: 80%;
-  padding-left: 275px;
-  padding-bottom: 20px;
+  width: 76%;
+  padding: 10px;
   text-align: center;
+  background-color: rgba(54, 54, 54, 0.8);
+  
 }
 
 .textSection {
   display: inline-block;
   padding-bottom: 20px;
+  color: #fefefe;
 }
 .imgSection {
   display: inline-block;
+  padding: 10px;
 }
 .close-reveal-modal{
   font-size: 15px;
 }
 
 .translucent-quiz-overlay {
-  width: 80%;
+  width: 76%;
   background-color: rgba(54, 54, 54, 0.8);
   padding: 10px;
   color: #fefefe;
@@ -50,4 +59,8 @@ h2{
 #submit-btn {
   background-color: #1779ba;
   color: white;
+}
+
+#footer {
+  width: 100%
 }
