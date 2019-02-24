@@ -65,26 +65,20 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-
         $.ajax({
           url: "/api/allbreeds",
           method: "GET"
         }).then(function (data) {
-
-
           for (var i = 0; i < data.length; i++) {
             var tR = $("<tr>");
             var image = $("<img>").attr("src", data[i].breed_photo);
-
             tR.append(
               $("<td>").append(image),
               $("<td>").text(data[i].breed_name),
               $("<td>").text(data[i].breed_descript)
             );
             $("tbody").append(tR);
-
           }
-
         });
       });
     </script>

@@ -23,12 +23,10 @@ app.use(express.static("public"));
 
 // Routes
 require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
-// clearing the `testdb`
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
