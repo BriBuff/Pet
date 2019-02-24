@@ -79,8 +79,10 @@
       event.preventDefault();
       var userInput = $(".input-field").val().trim();
 
+      key = "cdbce0163d4b880f2c38c1635e5c4544";
+
       //Initalize PetFinder API
-      var petAPI = "https://api.petfinder.com/pet.find?key=cdbce0163d4b880f2c38c1635e5c4544&animal=dog&location=" +
+      var petAPI = "https://api.petfinder.com/pet.find?key=" + key + "&animal=dog&location=" +
         userInput + "&output=basic&format=json&count=10";
         
       $.ajax({
