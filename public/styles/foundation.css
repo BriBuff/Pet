@@ -130,6 +130,21 @@
   .marketing-site-content-section-block-subheader {
     font-size: 13px;
   }
+
+  .work-feature-block {
+    padding: 10px 0;
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+  }
+  
+  .work-feature-block-image {
+    display: block;
+    margin: auto;
+    padding: 10px 0;
+    width: 300px;
+    height: 400px;
+  }
+  
   
   /* Input Form-New Breeds */
 
@@ -182,6 +197,7 @@
 .marketing-site-footer-bottom {
   background: #020304;
   padding: 1rem 0;
+  flex-shrink: 0;
 }
 
 .marketing-site-footer-bottom p,
