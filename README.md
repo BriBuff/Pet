@@ -23,6 +23,8 @@ Logging their results to a table so they can easily compare their results if the
 
 Users are able to create accounts to save their quiz results and information/searches.
 
+Add more breeds to the list of available breeds.
+
 Challenges:
 
 Front-End:
