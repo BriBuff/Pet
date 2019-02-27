@@ -11,7 +11,7 @@ Once you add the breed, you will be able to see it on the "See All Breeds" page 
 
 Want to search for dogs in your area? Go to the "Find A Dog" page and search by zip code to find the top ten dogs in your area.
 
-App Link: https://powerful-headland-93891.herokuapp.com/
+App Link: https://stormy-harbor-93476.herokuapp.com/breeds.html
 
 Video Test Run:
 
