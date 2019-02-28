@@ -1,6 +1,6 @@
 # Pet
 
-Description:
+## Description:
 
 This app has been created to find the perfect breed for you! Take the quiz and find out your compatible furever friend. 
 
@@ -15,7 +15,7 @@ App Link: https://stormy-harbor-93476.herokuapp.com/
 
 Video Test Run: https://drive.google.com/file/d/1UukYOHgi2gp8P-AiBZ8H1Oa9jBtK65I_/view
 
-Stretch Goals:
+## Stretch Goals:
 
 Link the site to the PetFinder API so users can look up dogs in their area matching their breed (as opposed to just dogs in their area).
 
@@ -25,30 +25,30 @@ Users are able to create accounts to save their quiz results and information/sea
 
 Add more breeds to the list of available breeds.
 
-Challenges:
+## Challenges:
 
-Front-End:
+## Front-End:
     *Trying to get the Foundations modal to populate. We couldn't seem to find the correct JS to make it pop up and/or it wouldn't hide the modal information inside the modal.
     * Had trouble with validation on quiz and search functions (again issues witht the Foundation JS).
 
-Back-End: 
+## Back-End: 
     Trying to get the Petfinder API to generate- this is where utilizing JSONP became essential in addition to making sure that the API URL was https:// and not http://. If it was the latter, there was a mixed media error on Heroku- even though it was working locally with http://.
 
     Getting the New Breed form to be required. The required HTML on the input/label fields weren't being read. There were a couple different ways to try to fix this. First, we tried to use a combined validation using HTML, CSS, and JS, but in the end stuck with a basic JQuery function to make the fields required.
 
-    "Cleaning" the code:
+#### "Cleaning" the code:
     1. Trying to get the JS/Jquery to be stored in a separate file and still interact with the HTML page. Everytime the JS/Jquery was moved, it would error out.
     2. Trying to get rid of unnecessary code. Some <div> tags ended up deleted upon merge and trying to get rid of unnecessary files (such as the unused Handlebars and htmlRoutes.js files).
 
-    Deployment/Merging:
+#### Deployment/Merging:
     1. Merging using Travis CI on GitHub- took awhile for us to figure out how to correct the code to make it so that Travis CI was happy with it. Mostly just spacing errors.
     2. Heroku Deployment- Even with JAWSDB connecting our project, JAWSDB wasn't connecting to our table, but instead was connecting to our values from within the table. Had to call the information differently in the SQL database to get our information to pop up.
 
-Responsibilities:
+## Responsibilities:
 
 This group project had us separated as database/paths (Bri), modal/controller (Jess), and view (Andrea). However, we all worked on pieces of each other's work.
 
-Particulars:
+## Particulars:
 
 Front-End Framework: Zurb Foundation
 
